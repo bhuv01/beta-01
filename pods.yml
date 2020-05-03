@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd
+  labels:
+    app: httpd
+spec:
+  containers:
+    - name: httpd
+      image: manneykapoor/beta-01:tagVersion
+      ports:
+        - containerPort: 80
