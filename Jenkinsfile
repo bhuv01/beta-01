@@ -25,10 +25,10 @@ pipeline {
                     sh "scp -o StrictHostKeyChecking=no services.yml app-pod.yml ubuntu@99.0.7.168:/home/ubuntu/"
 					script{
 						try{
-							sh " ssh ubuntu@99.0.7.168 kubectl apply -f ."
+							sh " ssh ubuntu@99.0.7.168 sudo kubectl apply -f ."
 						}
 						catch(error){
-							sh "ssh ubuntu@99.0.7.168 kubectl create -f ."
+							sh "ssh ubuntu@99.0.7.168 sudo kubectl create -f ."
 						}
 					}
                 }
