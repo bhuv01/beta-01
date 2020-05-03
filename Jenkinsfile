@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'worker02'}
     environment{
         DOCKER_TAG = getDockerTag()
     }
