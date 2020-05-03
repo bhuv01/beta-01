@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment{
         DOCKER_TAG = getDockerTag()
+	Label = worker02
     }
     stages{
         stage('Build Docker Image'){
